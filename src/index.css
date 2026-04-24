@@ -998,3 +998,9 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: clamp(2rem, 7vw, 4rem);
+    letter-spacing: 0.05em;
+  }
+}
