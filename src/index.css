@@ -200,7 +200,8 @@ body {
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(4rem, 12vw, 10rem);
+  font-size: clamp(4rem, 10vw + 1rem, 10rem);
+  /*font-size: clamp(4rem, 12vw, 10rem);*/
   font-weight: 800;
   letter-spacing: 0.2em;
   background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-purple) 50%, var(--accent-blue) 100%);
