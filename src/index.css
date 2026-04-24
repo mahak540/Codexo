@@ -1000,7 +1000,7 @@ body {
 }
 @media (max-width: 768px) {
   .hero-title {
-    font-size: clamp(2.8rem, 10vw, 5rem);
+    font-size: clamp(3rem, 11vw, 6rem);
     letter-spacing: 0.05em;
   }
 }
