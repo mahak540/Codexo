@@ -39,7 +39,7 @@ const ContactSection = () => {
       [e.target.name]: e.target.value
     });
   };
-
+/*
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -50,8 +50,26 @@ const ContactSection = () => {
       setFormData({ name: '', email: '', message: '' });
       setIsSubmitting(false);
     }, 1500);
-  };
+  };*/
+const handleSubmit = (e) => {
+  e.preventDefault();
+  setIsSubmitting(true);
 
+  const { name, email, message } = formData;
+
+  let whatsappMessage = `*New Message*\n\n`;
+  whatsappMessage += `*Name:* ${name}\n`;
+  whatsappMessage += `*Email:* ${email}\n`;
+  whatsappMessage += `*Message:* ${message}`;
+
+  const phoneNumber = "919779217061"; // your number
+  const encodedMessage = encodeURIComponent(whatsappMessage);
+
+  window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+
+  setFormData({ name: '', email: '', message: '' });
+  setIsSubmitting(false);
+};
   return (
     <section className="section contact" id="contact" ref={sectionRef}>
       <div className="contact-container">
